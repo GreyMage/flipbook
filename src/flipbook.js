@@ -174,7 +174,7 @@ var FlipbookController = (function(options){
 
             fbdom.addEventListener("mouseenter",function(){fb.tick(1,fb.posframerate);});
             fbdom.addEventListener("mouseleave",function(){fb.tick(-1,fb.negframerate);});
-            fb.dom.style.display = "none";
+            addClass(fb.dom,'flipbook-hidden');
         };
         var configureAllFlipbooks = function(){
             log("configureAllFlipbooks");
