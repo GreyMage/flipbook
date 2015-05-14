@@ -10,13 +10,15 @@ Build with
 And find the compiled source in dist/.
 
 #Usage
-**TL:DR:** `FlipbookController.getInstance().convertAll();`
+**TL:DR;** `FlipbookController.getInstance().convertAll();`
+
+----
 
 Flipbook works with data-attributes on img tags. The supported tags and their functions are as follows.
 
 * `data-flipbook-src`
 
-This is the URL (relative or otherwise) that will be loaded in as the flipbook. It should be a vertically-oriented set of frames, with the first frame being the top-most, and the last frame being the bottom-most
+This is the URL (relative or otherwise) that will be loaded in as the flipbook. It should be a vertically-oriented set of frames, with the first frame being the top-most, and the last frame being the bottom-most.
 
 * `data-flipbook-frames`
 
