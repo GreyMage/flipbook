@@ -16,7 +16,7 @@ module.exports = function(grunt) {
         uglify: {
             options: {
                 // the banner is inserted at the top of the output
-                banner: '/*! <%= pkg.name %> : <%= pkg.description %> : <%= grunt.template.today("dd-mm-yyyy") %> */\n'
+                banner: '/*! <%= pkg.name %> - <%= pkg.description %> By <%= pkg.author %> ( <%= pkg.homepage %> ), Built on <%= grunt.template.today("dd-mm-yyyy") %> */\n'
             },
             dist: {
                 files: {
@@ -41,7 +41,7 @@ module.exports = function(grunt) {
             files: ['<%= jshint.files %>'],
             tasks: ['jshint', 'concat', 'uglify']
         }
-    });
+    }); 
 
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-jshint');

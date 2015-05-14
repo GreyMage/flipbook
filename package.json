@@ -7,6 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Eric Cutler",
+  "homepage": "https://github.com/GreyMage/flipbook",
   "license": "ISC",
   "dependencies": {
     "grunt": "^0.4.5",
