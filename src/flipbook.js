@@ -64,7 +64,7 @@ var FlipbookController = (function(options){
         // Private
         var flipbooks = [];
         var configured = false;
-        var log = function(){ if(config.debug) console.log.apply(console, arguments); };
+        var log = function(){ if(config.debug && console && console.log && console.log.apply) console.log.apply(console, arguments); };
         var error = function(error){ throw "Error in "+_my_name+": "+error; };
         var init = function(){
             getFlipbookImgs();
