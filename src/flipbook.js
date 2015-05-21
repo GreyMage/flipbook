@@ -160,7 +160,7 @@ var FlipbookController = (function(options){
                 fbdom.style.backgroundPositionY = (fbdom.clientHeight*fb.currentframe*-1)+"px";
 
                 // tick again after set framerate time.
-                if(requestAnimationFrame) {
+                if(typeof requestAnimationFrame != 'undefined') {
                     setTimeout(function(){
                         requestAnimationFrame(function(){fb.tick();});
                     },1000/fb.framerate);
