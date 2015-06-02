@@ -124,7 +124,6 @@ var FlipbookController = (function(options){
             fb.direction = 1; // the position will be modified by this number multiplied into the deltas,
             // so 1 = forward, -1 = backward
             fb.tick = function(direction,framerate){
-
                 // If we got a tick with a direction, and we're already ticking,
                 // just change the direction and leave.
                 var cont = true;
@@ -157,10 +156,10 @@ var FlipbookController = (function(options){
                 fb.currentframe+=fb.direction;
 
                 // update background position
-                fbdom.style.backgroundPositionY = (fbdom.clientHeight*fb.currentframe*-1)+"px";
+                fbdom.style.backgroundPosition = "0 "+(fbdom.clientHeight*fb.currentframe*-1)+"px";
 
                 // tick again after set framerate time.
-                if(typeof requestAnimationFrame != 'undefined') {
+                if(typeof requestAnimationFrame != "undefined") {
                     setTimeout(function(){
                         requestAnimationFrame(function(){fb.tick();});
                     },1000/fb.framerate);
